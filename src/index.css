@@ -1,13 +1,200 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+  --body-background: #000;
+  --theme-color: #0a9396;
+  --text-color: #fff;
+  --delete-background: #cd0000;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lora';
+}
+
+body {
+  background: var(--body-background);
+}
+
+
+/********************************/
+.logo {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+  font-size: min(60px, 10vw);
+  background: var(--body-background);
+  color: var(--theme-color);
+}
+
+
+/********************************/
+.progress-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 50px 0;
+}
+
+.progress-bar {
+  height: min(70vw, 300px);
+  width: min(70vw, 300px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-bar .text {
+  position: absolute;
+  color: var(--theme-color);
+  text-align: center;
+  font-size: min(10vw, 40px);
+}
+
+
+/********************************/
+.add-another {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.another-btn {
+  font-weight: 600;
+  font-size: min(20px, 5vw);
+  padding: min(7px, 2vw) min(10vw, 100px);
+  border-radius: 5px;
+  border: none;
+  background: var(--theme-color);
+  color: var(--text-color);
+}
+
+.another-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.another-form input {
+  width: min(80vw, 600px);
+  padding: 5px 5px 5px 10px;
+  margin: 5px 0 15px 0;
+  outline: none;
+  border: 2px solid var(--body-background);
+  border-radius: 2px;
+  font-size: min(18px, 5vw);
+}
+
+.another-form label {
+  font-weight: 600;
+  color: var(--theme-color);
+  font-size: min(16px, 5vw);
+}
+
+.another-form button {
+  padding: 5px 0;
+  border: none;
+  background: var(--theme-color);
+  color: var(--text-color);
+  border-radius: 2px;
+  margin-top: 15px;
+  font-size: min(18px, 5vw);
+}
+
+
+/********************************/
+.details {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details .heading {
+  font-size: min(7vw, 36px);
+  font-weight: 700;
+  color: var(--theme-color);
+  margin-bottom: 10px;
+}
+
+.details-container {
+  max-width: 90%;
+  overflow-x: scroll;
+}
+
+.no-details {
+  color: var(--theme-color);
+  font-weight: 600;
+  text-align: center;
+  max-width: 90%;
+}
+
+.delete-all {
+  width: min(90vw, 200px);
+  border: none;
+  padding: 5px 0;
+  border-radius: 2px;
+  font-size: min(18px, 5vw);
+  color: var(--text-color);
+  background: var(--delete-background);
+  margin-top: 20px;
+}
+
+.all-tasks {
+  border-spacing: 20px 5px;
+  font-size: min(18px, 5vw);
+
+}
+
+.all-tasks input {
+  background: var(--body-background);
+  color: var(--theme-color);
+  outline: none;
+  border: none;
+  font-size: min(18px, 5vw);
+  padding: 0 5px;
+}
+
+.task {
+  color: var(--theme-color);
+}
+
+.task a {
+  text-decoration: none;
+  color: var(--theme-color);
+}
+
+.task img {
+  height: 20px;
+}
+
+.task .center {
+  text-align: center;
+}
+
+.task .selected {
+  border: 1px solid var(--theme-color);
+}
+
+.task .type1 {
+  width: min(50vw, 300px);
+}
+
+.task .type2 {
+  width: min(160px, 30vw);
+}
+
+
+/********************************/
+footer {
+  background: var(--theme-color);
+  margin-top: 50px;
+  text-align: center;
+  padding: 10px;
+  font-weight: 500;
 }
